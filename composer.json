@@ -13,7 +13,6 @@
     "require": {
         "php": ">=5.5.0",
         "soloproyectos-php/array": "dev-master",
-        "soloproyectos-php/sys-file": "dev-master",
         "soloproyectos-php/text": "dev-master"
     },
     "autoload": {
