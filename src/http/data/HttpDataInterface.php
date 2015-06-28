@@ -9,14 +9,14 @@
 namespace soloproyectos\http\data;
 
 /**
- * Class DataInterface.
+ * Class HttpDataInterface.
  *
  * @package Http\Data
  * @author  Gonzalo Chumillas <gchumillas@email.com>
  * @license https://github.com/soloproyectos-php/http-controller/blob/master/LICENSE The MIT License (MIT)
  * @link    https://github.com/soloproyectos-php/http-controller
  */
-interface DataInterface
+interface HttpDataInterface
 {
     /**
      * Gets an attribute value.

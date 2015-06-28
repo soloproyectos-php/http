@@ -8,18 +8,18 @@
  */
 namespace soloproyectos\http\data;
 use soloproyectos\arr\Arr;
-use soloproyectos\http\data\DataInterface;
+use soloproyectos\http\data\HttpDataInterface;
 use soloproyectos\http\exception\HttpException;
 
 /**
- * Class Session
+ * Class HttpSession
  *
  * @package Http\Data
  * @author  Gonzalo Chumillas <gchumillas@email.com>
  * @license https://github.com/soloproyectos-php/http-controller/blob/master/LICENSE The MIT License (MIT)
  * @link    https://github.com/soloproyectos-php/http-controller
  */
-class Session implements DataInterface
+class HttpSession implements HttpDataInterface
 {
     /**
      * Gets a request attribute.
@@ -31,7 +31,7 @@ class Session implements DataInterface
      */
     public function get($name, $default = "")
     {
-        Session::start();
+        HttpSession::start();
         return Arr::get($_SESSION, $name, $default);
     }
 
@@ -45,7 +45,7 @@ class Session implements DataInterface
      */
     public function set($name, $value)
     {
-        Session::start();
+        HttpSession::start();
 
         if (!preg_match("/^[\_a-z]/i", $name)) {
             throw new HttpException("Invalid session attribute: $name");
@@ -63,7 +63,7 @@ class Session implements DataInterface
      */
     public function exist($name)
     {
-        Session::start();
+        HttpSession::start();
         return Arr::is($_SESSION, $name);
     }
 
@@ -76,7 +76,7 @@ class Session implements DataInterface
      */
     public function delete($name)
     {
-        Session::start();
+        HttpSession::start();
         Arr::del($_SESSION, $name);
     }
 
@@ -87,7 +87,7 @@ class Session implements DataInterface
      */
     public static function clear()
     {
-        Session::start();
+        HttpSession::start();
         session_unset();
     }
 
@@ -110,7 +110,7 @@ class Session implements DataInterface
      */
     public static function close()
     {
-        Session::start();
+        HttpSession::start();
         session_write_close();
     }
 }

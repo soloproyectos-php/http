@@ -8,17 +8,17 @@
  */
 namespace soloproyectos\http\data;
 use soloproyectos\arr\Arr;
-use soloproyectos\http\data\DataInterface;
+use soloproyectos\http\data\HttpDataInterface;
 
 /**
- * Class Cookie.
+ * Class HttpCookie.
  *
  * @package Http\Data
  * @author  Gonzalo Chumillas <gchumillas@email.com>
  * @license https://github.com/soloproyectos-php/http-controller/blob/master/LICENSE The MIT License (MIT)
  * @link    https://github.com/soloproyectos-php/http-controller
  */
-class Cookie implements DataInterface
+class HttpCookie implements HttpDataInterface
 {
     /**
      * By default the cookie expires in one year (365 * 24 * 60 * 60 seconds)
@@ -50,7 +50,7 @@ class Cookie implements DataInterface
     public function set(
         $name,
         $value,
-        $expirationTime = Cookie::DEFAULT_EXPIRATION_TIME
+        $expirationTime = HttpCookie::DEFAULT_EXPIRATION_TIME
     ) {
         setcookie($name, $value, time() + $expirationTime, "/");
     }

@@ -8,10 +8,10 @@
  */
 namespace soloproyectos\http\data;
 use soloproyectos\arr\Arr;
-use soloproyectos\http\data\DataInterface;
+use soloproyectos\http\data\HttpDataInterface;
 
 /**
- * Class Request.
+ * Class HttpRequest.
  *
  * This class is used to access the request variables.
  *
@@ -20,12 +20,12 @@ use soloproyectos\http\data\DataInterface;
  * @license https://github.com/soloproyectos-php/http-controller/blob/master/LICENSE The MIT License (MIT)
  * @link    https://github.com/soloproyectos-php/http-controller
  */
-class Request implements DataInterface
+class HttpRequest implements HttpDataInterface
 {
     /**
      * Gets a request attribute.
      *
-     * @param string $name    Request attribute.
+     * @param string $name    HttpRequest attribute.
      * @param string $default Default value (not required)
      *
      * @return mixed
@@ -44,8 +44,8 @@ class Request implements DataInterface
     /**
      * Sets a request attribute.
      *
-     * @param string $name  Request attribute.
-     * @param mixed  $value Request value.
+     * @param string $name  HttpRequest attribute.
+     * @param mixed  $value HttpRequest value.
      *
      * @return void
      */
@@ -57,7 +57,7 @@ class Request implements DataInterface
     /**
      * Does the request attribute exist?
      *
-     * @param string $name Request attribute.
+     * @param string $name HttpRequest attribute.
      *
      * @return boolean
      */
@@ -69,7 +69,7 @@ class Request implements DataInterface
     /**
      * Deletes a request attribute.
      *
-     * @param string $name Request attribute.
+     * @param string $name HttpRequest attribute.
      *
      * @return void
      */
