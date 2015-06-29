@@ -40,4 +40,28 @@ class Http
         $separator = (Text::isEmpty($query)? "?" : "&");
         return Text::concat($separator, $url, http_build_query($params));
     }
+    
+    /**
+     * Encodes a text to be used in a XHTML document.
+     * 
+     * @param string $text Arbitrary text
+     * 
+     * @return string
+     */
+    static public function encode($text)
+    {
+        return htmlspecialchars($text);
+    }
+    
+    /**
+     * Decodes an HTML text segment.
+     * 
+     * @param string $text HTML segment
+     * 
+     * @return string
+     */
+    static public function decode($text)
+    {
+        return htmlspecialchars_decode($text);
+    }
 }
