@@ -77,7 +77,7 @@ class HttpSession implements HttpDataInterface
     public function delete($name)
     {
         HttpSession::start();
-        Arr::del($_SESSION, $name);
+        Arr::delete($_SESSION, $name);
     }
 
     /**

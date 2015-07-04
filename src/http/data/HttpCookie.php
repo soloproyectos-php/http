@@ -77,6 +77,6 @@ class HttpCookie implements HttpDataInterface
     public function delete($name)
     {
         setcookie($name, "", time() - 3600, "/");
-        Arr::del($_COOKIE, $name);
+        Arr::delete($_COOKIE, $name);
     }
 }

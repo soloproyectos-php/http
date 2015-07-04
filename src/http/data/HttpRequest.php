@@ -75,6 +75,6 @@ class HttpRequest implements HttpDataInterface
      */
     public function delete($name)
     {
-        Arr::del($_REQUEST, $name);
+        Arr::delete($_REQUEST, $name);
     }
 }
