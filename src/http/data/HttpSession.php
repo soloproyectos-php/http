@@ -64,7 +64,7 @@ class HttpSession implements HttpDataInterface
     public function exist($name)
     {
         HttpSession::start();
-        return Arr::is($_SESSION, $name);
+        return Arr::exist($_SESSION, $name);
     }
 
     /**

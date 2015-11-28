@@ -63,7 +63,7 @@ class HttpRequest implements HttpDataInterface
      */
     public function exist($name)
     {
-        return Arr::is($_REQUEST, $name);
+        return Arr::exist($_REQUEST, $name);
     }
 
     /**

@@ -64,7 +64,7 @@ class HttpCookie implements HttpDataInterface
      */
     public function exist($name)
     {
-        return Arr::is($_COOKIE, $name);
+        return Arr::exist($_COOKIE, $name);
     }
 
     /**
